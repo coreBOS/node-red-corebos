@@ -12,7 +12,8 @@
             "delete": "Eliminar",
             "retrieve": "Recuperar",
             "create": "Crear",
-            "update": "Actualizar"
+            "update": "Actualizar",
+            "invoke": "Invocar"
         },
         "help": {
             "config": "Utiliza este nodo de configuración para establecer las credenciales de acceso a tu instalación de coreBOS.",
@@ -21,10 +22,11 @@
             "query": "Ejecutar una consulta de servicio web",
             "describe": "Obtener todos los detalles de campos y metadatos de un módulo",
             "listtypes": "Obtener una lista de módulos disponibles",
-            "delete": "Eliminar un registro identificado por `msg.recordid`",
-            "retrieve": "Recuperar un registro identificado por `msg.recordid`",
-            "update": "Actualiza un registro con los valores presentes en `msg.record` y el módulo `msg.module`. Debe contener el ID del registro",
-            "create": "Insertar un registro con los valores presentes en `msg.record` y el módulo `msg.module`"
+            "delete": "Eliminar un registro identificado por <code>msg.recordid<code>",
+            "retrieve": "Recuperar un registro identificado por <code>msg.recordid<code>",
+            "update": "Actualiza un registro con los valores presentes en <code>msg.record<code> y el módulo <code>msg.module<code>. Debe contener el ID del registro",
+            "create": "Insertar un registro con los valores presentes en <code>msg.record<code> y el módulo <code>msg.module<code>",
+            "invoke": "Llama a cualquier punto final de servicio web configurando <code>msg.method</code> y <code>msg.params</code>. Opcionalmente, <code>msg.invoketype</code> para configurar la llamada GET o POST."
         }
     }
 }

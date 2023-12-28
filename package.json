@@ -32,7 +32,8 @@
 		"corebos-retrieve": "corebos/retrieve.js",
 		"corebos-delete": "corebos/delete.js",
 		"corebos-create": "corebos/create.js",
-		"corebos-update": "corebos/update.js"
+		"corebos-update": "corebos/update.js",
+		"corebos-invoke": "corebos/invoke.js"
 	}
 }
 }

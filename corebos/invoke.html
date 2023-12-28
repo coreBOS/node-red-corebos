@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    RED.nodes.registerType('corebos-delete',{
+    RED.nodes.registerType('corebos-invoke',{
         category: 'coreBOS',
         color: '#a6bbcf',
         defaults: {
@@ -7,20 +7,20 @@
         },
         inputs: 1,
         outputs: 1,
-        icon: "alert.svg",
+        icon: "link-call.svg",
         label: function() {
-            return this.name||"coreBOS Delete";
+            return this.name||"coreBOS Invoke";
         }
     });
 </script>
 
-<script type="text/html" data-template-name="corebos-delete">
+<script type="text/html" data-template-name="corebos-invoke">
     <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> <span data-i18n="coreBOS.label.name">Name</span></label>
         <input type="text" id="node-input-name" data-i18n="[placeholder]coreBOS.label.name">
     </div>
 </script>
 
-<script type="text/html" data-help-name="corebos-delete">
-    <p data-i18n="coreBOS.help.delete">Delete a record identified by <code>msg.recordid</code></p>
+<script type="text/html" data-help-name="corebos-invoke">
+    <p data-i18n="coreBOS.help.invoke">Invoke any web service end point by setting <code>msg.method</code> and <code>msg.params</code>. Optionally, <code>msg.invoketype</code> to set GET or POST call.</p>
 </script>
