@@ -1,0 +1,22 @@
+{
+    "coreBOS" : {
+        "label": {
+            "server": "Server",
+            "name": "Node Name",
+            "username": "User Name",
+            "accesskey": "Access Key",
+            "token": "Token",
+            "query": "Query",
+            "describe": "Describe",
+            "listtypes": "List Types"
+        },
+        "help": {
+            "config": "Use this configuration node to set the credentials to access your coreBOS installation.",
+            "login": "Execute the login process to coreBOS and return the session information in the payload",
+            "logout": "Execute the logout process from coreBOS",
+            "query": "Execute a web service query",
+            "describe": "Get all the details of fields and metadata of a module",
+            "listtypes": "Get a list of available modules"
+        }
+    }
+}

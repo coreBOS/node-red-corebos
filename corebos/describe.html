@@ -1,0 +1,30 @@
+<script type="text/javascript">
+    RED.nodes.registerType('corebos-describe',{
+        category: 'coreBOS',
+        color: '#a6bbcf',
+        defaults: {
+            modules: {value:"", required:true}
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "rpl.svg",
+        label: function() {
+            return this.name||"coreBOS Describe";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="corebos-describe">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span data-i18n="coreBOS.label.name">Name</span></label>
+        <input type="text" id="node-input-name" data-i18n="[placeholder]coreBOS.label.name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-modules"><i class="fa fa-vector-square"></i> <span data-i18n="coreBOS.label.query">Modules</span></label>
+        <input type="text" id="node-input-modules" data-i18n="[placeholder]coreBOS.label.modules">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="corebos-describe">
+    <p data-i18n="coreBOS.help.describe">Get all the details of fields and metadata of a module</p>
+</script>

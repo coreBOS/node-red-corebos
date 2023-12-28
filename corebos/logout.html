@@ -1,0 +1,30 @@
+<script type="text/javascript">
+    RED.nodes.registerType('corebos-logout',{
+        category: 'coreBOS',
+        color: '#a6bbcf',
+        defaults: {
+            server: {value:"", type:"corebos-config"}
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "file-in.svg",
+        label: function() {
+            return this.name||"coreBOS logout";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="corebos-logout">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span data-i18n="coreBOS.label.name">Name</span></label>
+        <input type="text" id="node-input-name" data-i18n="[placeholder]coreBOS.label.name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-server"><i class="fa fa-server"></i> <span data-i18n="coreBOS.label.server">Server</span></label>
+        <input type="text" id="node-input-server" data-i18n="[placeholder]coreBOS.label.server">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="corebos-logout">
+    <p data-i18n="coreBOS.help.logout">Execute the logout process from coreBOS</p>
+</script>

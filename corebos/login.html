@@ -1,0 +1,30 @@
+<script type="text/javascript">
+    RED.nodes.registerType('corebos-login',{
+        category: 'coreBOS',
+        color: '#a6bbcf',
+        defaults: {
+            server: {value:"", type:"corebos-config", required:true}
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "file-out.svg",
+        label: function() {
+            return this.name||"coreBOS login";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="corebos-login">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span data-i18n="coreBOS.label.name">Name</span></label>
+        <input type="text" id="node-input-name" data-i18n="[placeholder]coreBOS.label.name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-server"><i class="fa fa-server"></i> <span data-i18n="coreBOS.label.server">Server</span></label>
+        <input type="text" id="node-input-server" data-i18n="[placeholder]coreBOS.label.server">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="corebos-login">
+    <p data-i18n="coreBOS.help.login">Execute the login process to coreBOS and return the session information in the payload</p>
+</script>

@@ -1,0 +1,22 @@
+{
+    "coreBOS" : {
+        "label": {
+            "server": "Servidor",
+            "name": "Nombre Nodo",
+            "username": "Nombre Usuario",
+            "accesskey": "Clave de Acceso",
+            "token": "Token de Acceso",
+            "query": "Consulta",
+            "describe": "Describir",
+            "listtypes": "Listar Módulos"
+        },
+        "help": {
+            "config": "Utiliza este nodo de configuración para establecer las credenciales de acceso a tu instalación de coreBOS.",
+            "login": "Ejecuta el proceso de inicio de sesión en coreBOS y devuelve la información de la sesión en la carga",
+            "logout": "Ejecuta el proceso de desconexión de coreBOS",
+            "query": "Ejecutar una consulta de servicio web",
+            "describe": "Obtener todos los detalles de campos y metadatos de un módulo",
+            "listtypes": "Obtener una lista de módulos disponibles"
+        }
+    }
+}

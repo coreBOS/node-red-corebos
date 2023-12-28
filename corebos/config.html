@@ -1,0 +1,46 @@
+<script type="text/javascript">
+    RED.nodes.registerType('corebos-config',{
+        category: 'config',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+            server: {value:"", required:true},
+            username: {value:""},
+            accesskey: {value:""},
+            token: {value:""}
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "setting.png",
+        label: function() {
+            return this.name||"coreBOS config";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="corebos-config">
+    <div class="form-row">
+        <label for="node-config-input-name"><i class="fa fa-tag"></i> <span data-i18n="coreBOS.label.name">Name</span></label>
+        <input type="text" id="node-config-input-name" data-i18n="[placeholder]coreBOS.label.name">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-server"><i class="fa fa-server"></i> <span data-i18n="coreBOS.label.server">Server</span></label>
+        <input type="text" id="node-config-input-server" data-i18n="[placeholder]coreBOS.label.server">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-username"><i class="fa fa-user"></i> <span data-i18n="coreBOS.label.username">Username</span></label>
+        <input type="text" id="node-config-input-username" data-i18n="[placeholder]coreBOS.label.username">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-accesskey"><i class="fa fa-key"></i> <span data-i18n="coreBOS.label.accesskey">Access Key</span></label>
+        <input type="text" id="node-config-input-accesskey" data-i18n="[placeholder]coreBOS.label.accesskey">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-token"><i class="fa fa-shield"></i> <span data-i18n="coreBOS.label.token">Token</span></label>
+        <input type="text" id="node-config-input-token" data-i18n="[placeholder]coreBOS.label.token">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="corebos-config">
+    <p data-i18n="coreBOS.help.config">Use this configuration node to set the credentials to access your coreBOS installation.</p>
+</script>

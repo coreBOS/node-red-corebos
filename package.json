@@ -1,0 +1,34 @@
+{
+  "name": "@corebos/node-red-corebos",
+  "version": "1.0.0",
+  "description": "This node can be used in order to interact with the coreBOS web service API.",
+  "main": "none",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coreBOS/node-red-contrib-corebos.git"
+  },
+  "keywords": [
+    "corebos",
+    "node-red",
+    "webservice"
+  ],
+  "author": "Joe Bordes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coreBOS/node-red-contrib-corebos/issues"
+  },
+  "homepage": "https://github.com/coreBOS/node-red-contrib-corebos#readme",
+  "node-red" : {
+	"nodes": {
+		"corebos-config": "corebos/config.js",
+		"corebos-login": "corebos/login.js",
+		"corebos-logout": "corebos/logout.js",
+		"corebos-query": "corebos/query.js",
+		"corebos-describe": "corebos/describe.js",
+		"corebos-listtypes": "corebos/listtypes.js"
+	}
+}
+}
