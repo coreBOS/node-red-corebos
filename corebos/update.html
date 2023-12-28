@@ -1,0 +1,26 @@
+<script type="text/javascript">
+    RED.nodes.registerType('corebos-update',{
+        category: 'coreBOS',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""}
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "bridge-dash.svg",
+        label: function() {
+            return this.name||"coreBOS Update";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="corebos-update">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span data-i18n="coreBOS.label.name">Name</span></label>
+        <input type="text" id="node-input-name" data-i18n="[placeholder]coreBOS.label.name">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="corebos-update">
+    <p data-i18n="coreBOS.help.update">Update a record with the values present in `msg.record` and the module `msg.module`. Must contain the record ID</p>
+</script>

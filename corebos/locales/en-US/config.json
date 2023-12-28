@@ -10,7 +10,9 @@
             "describe": "Describe",
             "listtypes": "List Types",
             "delete": "Delete",
-            "retrieve": "Retrieve"
+            "retrieve": "Retrieve",
+            "create": "Create",
+            "update": "Update"
         },
         "help": {
             "config": "Use this configuration node to set the credentials to access your coreBOS installation.",
@@ -20,7 +22,9 @@
             "describe": "Get all the details of fields and metadata of a module",
             "listtypes": "Get a list of available modules",
             "delete": "Delete a record identified by `msg.recordid`",
-            "retrieve": "Retrieve a record identified by `msg.recordid`"
+            "retrieve": "Retrieve a record identified by `msg.recordid`",
+            "update": "Update a record with the values present in `msg.record` and the module `msg.module`. Must contain the record ID",
+            "create": "Insert a record with the values present in `msg.record` and the module `msg.module`"
         }
     }
 }

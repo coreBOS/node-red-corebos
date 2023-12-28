@@ -10,7 +10,9 @@
             "describe": "Describir",
             "listtypes": "Listar Módulos",
             "delete": "Eliminar",
-            "retrieve": "Recuperar"
+            "retrieve": "Recuperar",
+            "create": "Crear",
+            "update": "Actualizar"
         },
         "help": {
             "config": "Utiliza este nodo de configuración para establecer las credenciales de acceso a tu instalación de coreBOS.",
@@ -20,7 +22,9 @@
             "describe": "Obtener todos los detalles de campos y metadatos de un módulo",
             "listtypes": "Obtener una lista de módulos disponibles",
             "delete": "Eliminar un registro identificado por `msg.recordid`",
-            "retrieve": "Recuperar un registro identificado por `msg.recordid`"
+            "retrieve": "Recuperar un registro identificado por `msg.recordid`",
+            "update": "Actualiza un registro con los valores presentes en `msg.record` y el módulo `msg.module`. Debe contener el ID del registro",
+            "create": "Insertar un registro con los valores presentes en `msg.record` y el módulo `msg.module`"
         }
     }
 }
