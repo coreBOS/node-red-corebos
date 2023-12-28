@@ -8,7 +8,9 @@
             "token": "Token de Acceso",
             "query": "Consulta",
             "describe": "Describir",
-            "listtypes": "Listar Módulos"
+            "listtypes": "Listar Módulos",
+            "delete": "Eliminar",
+            "retrieve": "Recuperar"
         },
         "help": {
             "config": "Utiliza este nodo de configuración para establecer las credenciales de acceso a tu instalación de coreBOS.",
@@ -16,7 +18,9 @@
             "logout": "Ejecuta el proceso de desconexión de coreBOS",
             "query": "Ejecutar una consulta de servicio web",
             "describe": "Obtener todos los detalles de campos y metadatos de un módulo",
-            "listtypes": "Obtener una lista de módulos disponibles"
+            "listtypes": "Obtener una lista de módulos disponibles",
+            "delete": "Eliminar un registro identificado por `msg.recordid`",
+            "retrieve": "Recuperar un registro identificado por `msg.recordid`"
         }
     }
 }

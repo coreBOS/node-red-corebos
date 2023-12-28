@@ -36,15 +36,21 @@ module.exports = function(RED) {
 
             node.onMessage = async function (topic, message) {
                 cblib.setURL(client.options.server);
-                await cblib.doLogin(client.options.username, client.options.accesskey, false);
                 var payload = new Object();
                 payload.topic = topic;
                 payload.payload = new Object();
-                let sessinfo = cblib.getSession();
                 payload.payload.msg = message;
-                payload.payload.userId= sessinfo.userId ? sessinfo.userId : '';
-                payload.payload.sessionName = sessinfo.sessionName ? sessinfo.sessionName : '';
-                node.status({fill:"green", shape:"ring", text:"Ready"});
+                payload.payload.userId = '';
+                payload.payload.sessionName = '';
+                try {
+                    await cblib.doLogin(client.options.username, client.options.accesskey, false);
+                    let sessinfo = cblib.getSession();
+                    payload.payload.userId = sessinfo.userId ? sessinfo.userId : '';
+                    payload.payload.sessionName = sessinfo.sessionName ? sessinfo.sessionName : '';
+                    node.status({fill:"green", shape:"ring", text:"Ready"});
+                } catch (err) {
+                    node.error(err)
+                }
                 return payload
             }
 
