@@ -1,5 +1,7 @@
 {
     "coreBOS" : {
+        "loginfailed": "Acceso denegado",
+        "loginsuccess": "Acceso permitido",
         "label": {
             "server": "Servidor",
             "name": "Nombre Nodo",

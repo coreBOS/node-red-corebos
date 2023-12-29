@@ -1,5 +1,7 @@
 {
     "coreBOS" : {
+        "loginfailed": "Login failed",
+        "loginsuccess": "Login success",
         "label": {
             "server": "Server",
             "name": "Node Name",

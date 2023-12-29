@@ -84,4 +84,19 @@ module.exports = function(RED) {
         });
     }
     RED.nodes.registerType('corebos-login', coreBOSLoginNode);
+
+    RED.httpAdmin.post('/coreboslogin/:id', RED.auth.needsPermission('corebos.write'), function(req,res) {
+        var node = RED.nodes.getNode(req.params.id);
+        if (node != null) {
+            try {
+                node.receive();
+                res.sendStatus(200);
+            } catch(err) {
+                res.sendStatus(500);
+                node.error(RED._('corebos.loginfailed', {error:err.toString()}));
+            }
+        } else {
+            res.sendStatus(404);
+        }
+    });
 }
