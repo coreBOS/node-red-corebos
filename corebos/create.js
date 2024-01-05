@@ -5,10 +5,11 @@ module.exports = function(RED) {
         RED.nodes.createNode(this, config);
         var node = this;
 
-        node.on('input', async function (msg) {
+        node.on('input', async function (msg, send, done) {
             node.status({fill:"yellow", shape:"ring", text:"Executing"});
-            if ('corebos' in msg.payload && msg.payload.corebos.sessionName != '') {
-                cblib.setSession(msg.payload.corebos);
+            let conn = config.connection == '' ? 'corebos' : config.connection;
+            if (conn in msg.payload && msg.payload[conn].sessionName != '') {
+                cblib.setConnection(msg.payload[conn]);
                 if ('record' in msg && msg.record != '' && 'module' in msg && msg.module != '') {
                     msg.payload.created = false;
                     try {
@@ -20,12 +21,19 @@ module.exports = function(RED) {
                         node.status({fill:"yellow", shape:"ring", text:"Error"});
                         node.error(err)
                     }
-                    node.send(msg);
+                    if (send) {
+                        send(msg);
+                    } else {
+                        node.send(msg);
+                    }
                 } else {
                     node.status({fill:"red", shape:"ring", text:"No Record"});
                 }
             } else {
                 node.status({fill:"red", shape:"ring", text:"Login"});
+            }
+            if (done) {
+                done();
             }
         });
     }

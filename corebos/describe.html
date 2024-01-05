@@ -4,6 +4,7 @@
         color: '#a6bbcf',
         defaults: {
             name: {value:""},
+            connection: {value:''},
             modules: {value:"", required:true}
         },
         inputs: 1,
@@ -19,6 +20,10 @@
     <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> <span data-i18n="coreBOS.label.name">Name</span></label>
         <input type="text" id="node-input-name" data-i18n="[placeholder]coreBOS.label.name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-connection"><i class="fa fa-plug"></i> <span data-i18n="coreBOS.label.connection">Connection</span></label>
+        <input type="text" id="node-input-connection" data-i18n="[placeholder]coreBOS.label.connection">
     </div>
     <div class="form-row">
         <label for="node-input-modules"><i class="fa fa-vector-square"></i> <span data-i18n="coreBOS.label.query">Modules</span></label>

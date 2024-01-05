@@ -4,6 +4,7 @@
         "loginsuccess": "Login success",
         "label": {
             "server": "Server",
+            "connection": "Connection",
             "name": "Node Name",
             "username": "User Name",
             "accesskey": "Access Key",

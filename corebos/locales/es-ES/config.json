@@ -4,6 +4,7 @@
         "loginsuccess": "Acceso permitido",
         "label": {
             "server": "Servidor",
+            "connection": "Conexión",
             "name": "Nombre Nodo",
             "username": "Nombre Usuario",
             "accesskey": "Clave de Acceso",
