@@ -22,18 +22,19 @@
   },
   "homepage": "https://github.com/coreBOS/node-red-contrib-corebos#readme",
   "node-red" : {
-	"nodes": {
-		"corebos-config": "corebos/config.js",
-		"corebos-login": "corebos/login.js",
-		"corebos-logout": "corebos/logout.js",
-		"corebos-query": "corebos/query.js",
-		"corebos-describe": "corebos/describe.js",
-		"corebos-listtypes": "corebos/listtypes.js",
-		"corebos-retrieve": "corebos/retrieve.js",
-		"corebos-delete": "corebos/delete.js",
-		"corebos-create": "corebos/create.js",
-		"corebos-update": "corebos/update.js",
-		"corebos-invoke": "corebos/invoke.js"
-	}
-}
+    "version": ">=2.0.0",
+    "nodes": {
+      "corebos-config": "corebos/config.js",
+      "corebos-login": "corebos/login.js",
+      "corebos-logout": "corebos/logout.js",
+      "corebos-query": "corebos/query.js",
+      "corebos-describe": "corebos/describe.js",
+      "corebos-listtypes": "corebos/listtypes.js",
+      "corebos-retrieve": "corebos/retrieve.js",
+      "corebos-delete": "corebos/delete.js",
+      "corebos-create": "corebos/create.js",
+      "corebos-update": "corebos/update.js",
+      "corebos-invoke": "corebos/invoke.js"
+    }
+  }
 }
