@@ -32,8 +32,12 @@ module.exports = function(RED) {
             } catch (err) {
                 node.status({fill:"red", shape:"ring", text:"Error"});
             }
-            if (typeof(msg.payload)=='undefined') {
+            if (typeof(msg.payload) == 'undefined') {
                 msg.payload = {};
+            }
+            if (typeof(msg.payload) != 'object') {
+                let current = msg.payload;
+                msg.payload = {"payload": current};
             }
             msg.payload.corebos = cinfo;
             if (config.name != '') {
