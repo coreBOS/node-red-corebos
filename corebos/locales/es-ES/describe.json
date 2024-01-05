@@ -1,0 +1,12 @@
+{
+    "coreBOS" : {
+        "label": {
+            "connection": "Conexión",
+            "name": "Nombre Nodo",
+            "modules": "Module(s)"
+        },
+        "help": {
+            "describe": "Obtener todos los detalles de campos y metadatos de un módulo"
+        }
+    }
+}

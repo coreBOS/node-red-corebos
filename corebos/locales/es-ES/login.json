@@ -1,0 +1,14 @@
+{
+    "coreBOS" : {
+        "loginfailed": "Acceso denegado",
+        "loginsuccess": "Acceso permitido",
+        "label": {
+            "server": "Servidor",
+            "connection": "Conexión",
+            "name": "Nombre Nodo"
+        },
+        "help": {
+            "login": "Ejecuta el proceso de inicio de sesión en coreBOS y devuelve la información de la sesión en la carga"
+        }
+    }
+}

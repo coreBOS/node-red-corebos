@@ -6,13 +6,13 @@
             data: JSON.stringify({}),
             contentType: 'application/json; charset=utf-8',
             success: function (resp) {
-                RED.notify(node._('corebos.loginsuccess', { }), { type: 'success', id: 'corebos-login', timeout: 2000 });
+                RED.notify(node._('coreBOS.loginsuccess', { }), { type: 'success', id: 'corebos-login', timeout: 2000 });
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 if (jqXHR.status == 404) {
                     RED.notify(node._('common.notification.error', { message: node._('common.notification.errors.not-deployed') }), 'error');
                 } else if (jqXHR.status == 500) {
-                    RED.notify(node._('common.notification.error', { message: node._('corebos.loginfailed') }), 'error');
+                    RED.notify(node._('common.notification.error', { message: node._('coreBOS.loginfailed') }), 'error');
                 } else if (jqXHR.status == 0) {
                     RED.notify(node._('common.notification.error', { message: node._('common.notification.errors.no-response') }), 'error');
                 } else {

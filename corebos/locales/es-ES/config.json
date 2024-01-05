@@ -1,35 +1,14 @@
 {
     "coreBOS" : {
-        "loginfailed": "Acceso denegado",
-        "loginsuccess": "Acceso permitido",
         "label": {
             "server": "Servidor",
-            "connection": "Conexión",
             "name": "Nombre Nodo",
             "username": "Nombre Usuario",
             "accesskey": "Clave de Acceso",
-            "token": "Token de Acceso",
-            "query": "Consulta",
-            "describe": "Describir",
-            "listtypes": "Listar Módulos",
-            "delete": "Eliminar",
-            "retrieve": "Recuperar",
-            "create": "Crear",
-            "update": "Actualizar",
-            "invoke": "Invocar"
+            "token": "Token de Acceso"
         },
         "help": {
-            "config": "Utiliza este nodo de configuración para establecer las credenciales de acceso a tu instalación de coreBOS.",
-            "login": "Ejecuta el proceso de inicio de sesión en coreBOS y devuelve la información de la sesión en la carga",
-            "logout": "Ejecuta el proceso de desconexión de coreBOS",
-            "query": "Ejecutar una consulta de servicio web",
-            "describe": "Obtener todos los detalles de campos y metadatos de un módulo",
-            "listtypes": "Obtener una lista de módulos disponibles",
-            "delete": "Eliminar un registro identificado por <code>msg.recordid<code>",
-            "retrieve": "Recuperar un registro identificado por <code>msg.recordid<code>",
-            "update": "Actualiza un registro con los valores presentes en <code>msg.record<code> y el módulo <code>msg.module<code>. Debe contener el ID del registro",
-            "create": "Insertar un registro con los valores presentes en <code>msg.record<code> y el módulo <code>msg.module<code>",
-            "invoke": "Llama a cualquier punto final de servicio web configurando <code>msg.method</code> y <code>msg.params</code>. Opcionalmente, <code>msg.invoketype</code> para configurar la llamada GET o POST."
+            "config": "Utiliza este nodo de configuración para establecer las credenciales de acceso a tu instalación de coreBOS."
         }
     }
 }

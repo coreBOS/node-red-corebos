@@ -1,0 +1,12 @@
+{
+    "coreBOS" : {
+        "label": {
+            "connection": "Connection",
+            "name": "Node Name",
+            "query": "Query"
+        },
+        "help": {
+            "query": "Execute a web service query"
+        }
+    }
+}

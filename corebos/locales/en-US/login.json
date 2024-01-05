@@ -1,0 +1,14 @@
+{
+    "coreBOS" : {
+        "loginfailed": "Login failed",
+        "loginsuccess": "Login success",
+        "label": {
+            "server": "Server",
+            "connection": "Connection",
+            "name": "Node Name"
+        },
+        "help": {
+            "login": "Execute the login process to coreBOS and return the session information in the payload"
+        }
+    }
+}

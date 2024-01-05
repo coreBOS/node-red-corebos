@@ -1,0 +1,13 @@
+{
+    "coreBOS" : {
+        "loginfailed": "Acceso denegado",
+        "loginsuccess": "Acceso permitido",
+        "label": {
+            "connection": "Conexión",
+            "name": "Nombre Nodo"
+        },
+        "help": {
+            "logout": "Ejecuta el proceso de desconexión de coreBOS"
+        }
+    }
+}

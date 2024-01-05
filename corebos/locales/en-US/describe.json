@@ -1,0 +1,12 @@
+{
+    "coreBOS" : {
+        "label": {
+            "connection": "Connection",
+            "name": "Node Name",
+            "modules": "Module(s)"
+        },
+        "help": {
+            "describe": "Get all the details of fields and metadata of a module"
+        }
+    }
+}

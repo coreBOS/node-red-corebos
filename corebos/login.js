@@ -74,7 +74,7 @@ module.exports = function(RED) {
                 res.sendStatus(200);
             } catch(err) {
                 res.sendStatus(500);
-                cbnode.error(RED._('corebos.loginfailed', {error:err.toString()}));
+                cbnode.error(RED._('coreBOS.loginfailed', {error:err.toString()}));
             }
         } else {
             res.sendStatus(404);

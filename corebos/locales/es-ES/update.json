@@ -1,0 +1,11 @@
+{
+    "coreBOS" : {
+        "label": {
+            "connection": "Conexión",
+            "name": "Nombre Nodo"
+        },
+        "help": {
+            "update": "Actualiza un registro con los valores presentes en <code>msg.record<code> y el módulo <code>msg.module<code>. Debe contener el ID del registro"
+        }
+    }
+}

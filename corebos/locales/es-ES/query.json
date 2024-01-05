@@ -1,0 +1,12 @@
+{
+    "coreBOS" : {
+        "label": {
+            "connection": "Conexión",
+            "name": "Nombre Nodo",
+            "query": "Consulta"
+        },
+        "help": {
+            "query": "Ejecutar una consulta de servicio web"
+        }
+    }
+}
