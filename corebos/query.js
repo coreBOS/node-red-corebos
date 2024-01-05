@@ -13,7 +13,7 @@ module.exports = function(RED) {
             if (conn in msg.payload && msg.payload[conn].sessionName != '') {
                 cblib.setConnection(msg.payload[conn]);
                 try {
-                    let records = await cblib.doQueryWithTotal(config.query);
+                    let records = await cblib.doQueryWithTotal(encodeURIComponent(config.query));
                     msg.payload.totalrows = records.totalrows;
                     for (let record of records.result) {
                         msg.record = record;

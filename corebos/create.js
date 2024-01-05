@@ -13,7 +13,7 @@ module.exports = function(RED) {
                 if ('record' in msg && msg.record != '' && 'module' in msg && msg.module != '') {
                     msg.payload.created = false;
                     try {
-                        let insrdo = await cblib.doCreate(msg.module, msg.record);
+                        let insrdo = await cblib.doCreate(msg.module, encodeURIComponent(JSON.stringify(msg.record)));
                         msg.payload.created = true;
                         msg.record = insrdo;
                         node.status({fill:"green", shape:"ring", text:"Done"});
