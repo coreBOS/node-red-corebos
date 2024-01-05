@@ -1,18 +1,12 @@
 <script type="text/javascript">
-    function executeLogin(node, customMsg) {
-        RED.notify(customMsg)
-        var label = node._def.label.call(node,customMsg?customMsg.__user_inject_props__:undefined);
-        if (label.length > 30) {
-            label = label.substring(0, 50) + '...';
-        }
-        label = label.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    function executeLogin(node) {
         $.ajax({
             url: 'coreboslogin/' + node.id,
             type: 'POST',
             data: JSON.stringify({}),
             contentType: 'application/json; charset=utf-8',
             success: function (resp) {
-                RED.notify(node._('corebos.loginsuccess', { label: label }), { type: 'success', id: 'corebos-login', timeout: 2000 });
+                RED.notify(node._('corebos.loginsuccess', { }), { type: 'success', id: 'corebos-login', timeout: 2000 });
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 if (jqXHR.status == 404) {
