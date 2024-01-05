@@ -59,24 +59,23 @@ function _setFetchOptions({mode, headers}) {
  */
 function addcbWsOptions(operation, valueMap=null, resource='', valueMapParam = 'element') {
 	let reqData = `operation=${operation}`;
-	if(valueMap && (typeof valueMap  === 'object' || Array.isArray(valueMap))){
+	if (valueMap && (typeof valueMap === 'object' || Array.isArray(valueMap))) {
 		reqData += `&${valueMapParam}=${JSON.stringify(valueMap)}`;
 	}
-	if(resource){
+	if (resource) {
 		reqData += `&elementType=${resource}`;
 	}
 	if (_cbwsOptions && _cbwsOptions.length > 0) {
 		reqData += `&cbwsOptions=${JSON.stringify(_cbwsOptions)}`;
 		_cbwsOptions = [];
 	}
-
 	return reqData;
 }
 
 function setSession(logindata) {
 	_sessionid = logindata.sessionName;
 	_userid = logindata.userId;
-	if(fetchOptions && fetchOptions.headers){
+	if (fetchOptions && fetchOptions.headers) {
 		fetchOptions.headers["corebos-authorization"] = logindata.sessionName;
 	}
 }
@@ -689,8 +688,7 @@ function doUpdate(module, valuemap) {
  */
 function doRevise(module, valuemap) {
 	// reqtype = 'POST';
-	let postdata = addcbWsOptions('revise', valuemap, module, 'element');
-	fetchOptions.body = postdata;
+	fetchOptions.body = addcbWsOptions('revise', valuemap, module, 'element');
 	fetchOptions.method = 'post';
 	return fetch(_serviceurl, fetchOptions)
 		.then(status)
