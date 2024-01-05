@@ -49,6 +49,10 @@ function setURL(cburl, fetchingOptions=null) {
 	}
 }
 
+function getURL() {
+	return _serviceurl;
+}
+
 function _setFetchOptions({mode, headers}) {
 	fetchOptions.mode = mode;
 	fetchOptions.headers = headers;
@@ -70,6 +74,11 @@ function addcbWsOptions(operation, valueMap=null, resource='', valueMapParam = '
 		_cbwsOptions = [];
 	}
 	return reqData;
+}
+
+function setConnection(logindata) {
+	setSession(logindata);
+	setURL(logindata.host);
 }
 
 function setSession(logindata) {
@@ -923,15 +932,15 @@ var cbMD5=function(s){function L(k,d){return(k<<d)|(k>>>(32-d))}function K(G,k){
 
 module.exports = {
 	setURL,
+	getURL,
 	setSession,
 	getSession,
+	setConnection,
 	getEntityId,
 	getLanguage,
 	getRecordId,
 	hasError,
 	lastError,
-	status,
-	getData,
 	doLogin,
 	doLoginPortal,
 	doLogout,
