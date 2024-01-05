@@ -40,7 +40,7 @@ var fetchOptions = {
 };
 
 function setURL(cburl, fetchingOptions=null) {
-	if (cburl!=='') {
+	if (cburl && cburl!=='') {
 		// Format the url before appending servicebase
 		_serviceurl = cburl + (cburl.substr(cburl.length - 1) === '/' ? '' : '/') + _servicebase;
 	}
@@ -179,7 +179,7 @@ async function doLogin(username, accesskey, withpassword) {
 		withpassword = false;
 	}
 	let login = false;
-	await __doChallenge(username)
+	return await __doChallenge(username)
 		.then(async function (data) {
 			if (hasError(data) === false) {
 				let result = data['result'];
@@ -191,7 +191,7 @@ async function doLogin(username, accesskey, withpassword) {
 				postdata += '&accessKey=' + (withpassword ? _servicetoken + accesskey : cbMD5(_servicetoken + accesskey));
 				fetchOptions.body = postdata;
 
-				await fetch(_serviceurl, fetchOptions)
+				return await fetch(_serviceurl, fetchOptions)
 					.then(status)
 					.then(getData)
 					.then(logindata => {
@@ -203,16 +203,15 @@ async function doLogin(username, accesskey, withpassword) {
 							login = logindata;
 							Promise.resolve(logindata);
 						} else {
-							Promise.reject(new Error('incorrect response: ' + lastError()));
+							Promise.resolve(new Error('incorrect response: ' + lastError()));
 						}
 					})
-					.catch(error => Promise.reject(error));
+					.catch(error => Promise.resolve(error));
 			} else {
 				return new Error('incorrect response: ' + lastError());
 			}
 		})
 		.catch(error => { Promise.reject(error)});
-	return login;
 }
 
 /**
@@ -297,11 +296,11 @@ function doLogout() {
 				_userid = false;
 				return Promise.resolve(data['result']);
 			} else {
-				return Promise.reject(new Error('incorrect response: '+lastError()));
+				return Promise.resolve(new Error('incorrect response: '+lastError()));
 			}
 		})
 		.catch(function (error) {
-			return Promise.reject(error);
+			return Promise.resolve(error);
 		});
 }
 
