@@ -1,0 +1,65 @@
+[
+    {
+        "id": "4a6d660217135988",
+        "type": "tab",
+        "label": "Query",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a57d3bc2172db3e8",
+        "type": "debug",
+        "z": "4a6d660217135988",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "65acb41ef6f3a396",
+        "type": "corebos-query",
+        "z": "4a6d660217135988",
+        "name": "",
+        "connection": "cbng",
+        "query": "select accountname,email1 from accounts where accountname like 'AC%'",
+        "x": 560,
+        "y": 120,
+        "wires": [
+            [
+                "a57d3bc2172db3e8"
+            ]
+        ]
+    },
+    {
+        "id": "f140767305e3b6f7",
+        "type": "corebos-login",
+        "z": "4a6d660217135988",
+        "name": "cbng",
+        "server": "e7379b195bf6a0f8",
+        "x": 230,
+        "y": 120,
+        "wires": [
+            [
+                "65acb41ef6f3a396"
+            ]
+        ]
+    },
+    {
+        "id": "e7379b195bf6a0f8",
+        "type": "corebos-config",
+        "name": "cbcreds",
+        "server": "http://localhost/coreBOSNG",
+        "username": "admin",
+        "accesskey": "cdYTBpiMR9RfGgO",
+        "token": ""
+    }
+]

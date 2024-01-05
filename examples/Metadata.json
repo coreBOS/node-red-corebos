@@ -1,0 +1,110 @@
+[
+    {
+        "id": "77b5685d47b47f53",
+        "type": "tab",
+        "label": "Info",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1d99a5dff4a1e9ae",
+        "type": "debug",
+        "z": "77b5685d47b47f53",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "02dff7d9f03ff674",
+        "type": "corebos-login",
+        "z": "77b5685d47b47f53",
+        "name": "",
+        "server": "e7379b195bf6a0f8",
+        "x": 320,
+        "y": 100,
+        "wires": [
+            [
+                "6b21bd111958d8fc"
+            ]
+        ]
+    },
+    {
+        "id": "6b21bd111958d8fc",
+        "type": "corebos-listtypes",
+        "z": "77b5685d47b47f53",
+        "name": "",
+        "connection": "",
+        "x": 630,
+        "y": 100,
+        "wires": [
+            [
+                "1d99a5dff4a1e9ae"
+            ]
+        ]
+    },
+    {
+        "id": "ab8d8c3315567873",
+        "type": "debug",
+        "z": "77b5685d47b47f53",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "d757bae5d23bb12e",
+        "type": "corebos-login",
+        "z": "77b5685d47b47f53",
+        "name": "",
+        "server": "e7379b195bf6a0f8",
+        "x": 320,
+        "y": 220,
+        "wires": [
+            [
+                "4330137cfa381757"
+            ]
+        ]
+    },
+    {
+        "id": "4330137cfa381757",
+        "type": "corebos-describe",
+        "z": "77b5685d47b47f53",
+        "name": "",
+        "connection": "",
+        "modules": "Accounts,Contacts",
+        "x": 630,
+        "y": 220,
+        "wires": [
+            [
+                "ab8d8c3315567873"
+            ]
+        ]
+    },
+    {
+        "id": "e7379b195bf6a0f8",
+        "type": "corebos-config",
+        "name": "cbcreds",
+        "server": "http://localhost/coreBOSNG",
+        "username": "admin",
+        "accesskey": "cdYTBpiMR9RfGgO",
+        "token": ""
+    }
+]

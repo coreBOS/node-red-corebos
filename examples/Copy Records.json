@@ -1,0 +1,241 @@
+[
+    {
+        "id": "7a12b06cfb02ea50",
+        "type": "tab",
+        "label": "Copy Records",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "efe67e1278a460f9",
+        "type": "corebos-login",
+        "z": "7a12b06cfb02ea50",
+        "name": "cbng",
+        "server": "e7379b195bf6a0f8",
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "b66226377bb9b304"
+            ]
+        ]
+    },
+    {
+        "id": "4fd5b70ed24065c4",
+        "type": "corebos-query",
+        "z": "7a12b06cfb02ea50",
+        "name": "",
+        "connection": "cbng",
+        "query": "select * from accounts where cf_1295=0 limit 1000",
+        "x": 180,
+        "y": 220,
+        "wires": [
+            [
+                "dc38259a30f002ab"
+            ]
+        ]
+    },
+    {
+        "id": "01a067a218ba69ab",
+        "type": "debug",
+        "z": "7a12b06cfb02ea50",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "603806f1f78fb829",
+        "type": "change",
+        "z": "7a12b06cfb02ea50",
+        "name": "set processed",
+        "rules": [
+            {
+                "t": "set",
+                "p": "record.cf_1295",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "record.id",
+                "pt": "msg",
+                "to": "orgID",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 440,
+        "wires": [
+            [
+                "1f5985c5fde68263"
+            ]
+        ]
+    },
+    {
+        "id": "1f5985c5fde68263",
+        "type": "corebos-update",
+        "z": "7a12b06cfb02ea50",
+        "name": "",
+        "connection": "cbng",
+        "x": 990,
+        "y": 440,
+        "wires": [
+            [
+                "01a067a218ba69ab"
+            ]
+        ]
+    },
+    {
+        "id": "dc38259a30f002ab",
+        "type": "change",
+        "z": "7a12b06cfb02ea50",
+        "name": "set module/orgID/User",
+        "rules": [
+            {
+                "t": "set",
+                "p": "module",
+                "pt": "msg",
+                "to": "Accounts",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "record.assigned_user_id",
+                "pt": "msg",
+                "to": "19x1",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "orgID",
+                "pt": "msg",
+                "to": "record.id",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 220,
+        "wires": [
+            [
+                "246b5d4df398d069"
+            ]
+        ]
+    },
+    {
+        "id": "b66226377bb9b304",
+        "type": "corebos-login",
+        "z": "7a12b06cfb02ea50",
+        "name": "EV inst",
+        "server": "075a128110af5832",
+        "x": 360,
+        "y": 80,
+        "wires": [
+            [
+                "4fd5b70ed24065c4"
+            ]
+        ]
+    },
+    {
+        "id": "9447e4adcb3d2c34",
+        "type": "corebos-create",
+        "z": "7a12b06cfb02ea50",
+        "name": "",
+        "connection": "EVinst",
+        "x": 260,
+        "y": 440,
+        "wires": [
+            [
+                "97e20b8bfcf80401"
+            ]
+        ]
+    },
+    {
+        "id": "97e20b8bfcf80401",
+        "type": "delay",
+        "z": "7a12b06cfb02ea50",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "20",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 490,
+        "y": 440,
+        "wires": [
+            [
+                "603806f1f78fb829"
+            ]
+        ]
+    },
+    {
+        "id": "246b5d4df398d069",
+        "type": "delay",
+        "z": "7a12b06cfb02ea50",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "20",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 370,
+        "y": 320,
+        "wires": [
+            [
+                "9447e4adcb3d2c34"
+            ]
+        ]
+    },
+    {
+        "id": "e7379b195bf6a0f8",
+        "type": "corebos-config",
+        "name": "cbcreds",
+        "server": "http://localhost/coreBOSNG",
+        "username": "admin",
+        "accesskey": "cdYTBpiMR9RfGgO",
+        "token": ""
+    },
+    {
+        "id": "075a128110af5832",
+        "type": "corebos-config",
+        "name": "EV Inst",
+        "server": "http://localhost/evinst",
+        "username": "admin",
+        "accesskey": "FeBH8udmG9PFZu6V",
+        "token": ""
+    }
+]

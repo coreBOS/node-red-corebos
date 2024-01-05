@@ -1,0 +1,164 @@
+[
+    {
+        "id": "7e9ec488b1e9880b",
+        "type": "tab",
+        "label": "Invoke",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d6903630393ccc05",
+        "type": "debug",
+        "z": "7e9ec488b1e9880b",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "b26f6fb24dbb3e11",
+        "type": "corebos-login",
+        "z": "7e9ec488b1e9880b",
+        "name": "",
+        "server": "e7379b195bf6a0f8",
+        "x": 460,
+        "y": 100,
+        "wires": [
+            [
+                "98f454161d6d0e84"
+            ]
+        ]
+    },
+    {
+        "id": "817f00c8d52e3faf",
+        "type": "inject",
+        "z": "7e9ec488b1e9880b",
+        "name": "Method with no params",
+        "props": [
+            {
+                "p": "method",
+                "v": "getPortalUserInfo",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 200,
+        "y": 100,
+        "wires": [
+            [
+                "b26f6fb24dbb3e11"
+            ]
+        ]
+    },
+    {
+        "id": "98f454161d6d0e84",
+        "type": "corebos-invoke",
+        "z": "7e9ec488b1e9880b",
+        "name": "",
+        "connection": "",
+        "x": 740,
+        "y": 100,
+        "wires": [
+            [
+                "d6903630393ccc05"
+            ]
+        ]
+    },
+    {
+        "id": "a761261070a95bf7",
+        "type": "debug",
+        "z": "7e9ec488b1e9880b",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "d63a8c97ed6e5db5",
+        "type": "corebos-login",
+        "z": "7e9ec488b1e9880b",
+        "name": "",
+        "server": "e7379b195bf6a0f8",
+        "x": 460,
+        "y": 220,
+        "wires": [
+            [
+                "d38123669403b228"
+            ]
+        ]
+    },
+    {
+        "id": "c0399db0786b853a",
+        "type": "inject",
+        "z": "7e9ec488b1e9880b",
+        "name": "Method with params",
+        "props": [
+            {
+                "p": "method",
+                "v": "getRelatedModulesInfomation",
+                "vt": "str"
+            },
+            {
+                "p": "params",
+                "v": "{\"module\":\"Contacts\"}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 190,
+        "y": 220,
+        "wires": [
+            [
+                "d63a8c97ed6e5db5"
+            ]
+        ]
+    },
+    {
+        "id": "d38123669403b228",
+        "type": "corebos-invoke",
+        "z": "7e9ec488b1e9880b",
+        "name": "",
+        "connection": "",
+        "x": 740,
+        "y": 220,
+        "wires": [
+            [
+                "a761261070a95bf7"
+            ]
+        ]
+    },
+    {
+        "id": "e7379b195bf6a0f8",
+        "type": "corebos-config",
+        "name": "cbcreds",
+        "server": "http://localhost/coreBOSNG",
+        "username": "admin",
+        "accesskey": "cdYTBpiMR9RfGgO",
+        "token": ""
+    }
+]

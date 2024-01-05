@@ -1,0 +1,329 @@
+[
+    {
+        "id": "e6e934aab5a610e2",
+        "type": "tab",
+        "label": "CRUD",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "63f70575d798e5d2",
+        "type": "corebos-retrieve",
+        "z": "e6e934aab5a610e2",
+        "name": "",
+        "connection": "",
+        "x": 750,
+        "y": 80,
+        "wires": [
+            [
+                "ca5622e839695142"
+            ]
+        ]
+    },
+    {
+        "id": "ca5622e839695142",
+        "type": "debug",
+        "z": "e6e934aab5a610e2",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "8c700581cec6b157",
+        "type": "corebos-login",
+        "z": "e6e934aab5a610e2",
+        "name": "",
+        "server": "e7379b195bf6a0f8",
+        "x": 420,
+        "y": 80,
+        "wires": [
+            [
+                "63f70575d798e5d2"
+            ]
+        ]
+    },
+    {
+        "id": "d459772abc3a8d84",
+        "type": "inject",
+        "z": "e6e934aab5a610e2",
+        "name": "recordid",
+        "props": [
+            {
+                "p": "recordid",
+                "v": "11x74",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 80,
+        "wires": [
+            [
+                "8c700581cec6b157"
+            ]
+        ]
+    },
+    {
+        "id": "4191e554b486133d",
+        "type": "debug",
+        "z": "e6e934aab5a610e2",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "c6bac2e4957ac881",
+        "type": "corebos-login",
+        "z": "e6e934aab5a610e2",
+        "name": "",
+        "server": "e7379b195bf6a0f8",
+        "x": 420,
+        "y": 200,
+        "wires": [
+            [
+                "50e280e4f21fae46"
+            ]
+        ]
+    },
+    {
+        "id": "dfde945b5d7084b7",
+        "type": "inject",
+        "z": "e6e934aab5a610e2",
+        "name": "recordid",
+        "props": [
+            {
+                "p": "recordid",
+                "v": "12x1931",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 200,
+        "wires": [
+            [
+                "c6bac2e4957ac881"
+            ]
+        ]
+    },
+    {
+        "id": "50e280e4f21fae46",
+        "type": "corebos-delete",
+        "z": "e6e934aab5a610e2",
+        "name": "",
+        "connection": "",
+        "x": 740,
+        "y": 200,
+        "wires": [
+            [
+                "4191e554b486133d"
+            ]
+        ]
+    },
+    {
+        "id": "226fe83a95c7eb57",
+        "type": "debug",
+        "z": "e6e934aab5a610e2",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "a95f97a14a988e84",
+        "type": "corebos-login",
+        "z": "e6e934aab5a610e2",
+        "name": "",
+        "server": "e7379b195bf6a0f8",
+        "x": 420,
+        "y": 320,
+        "wires": [
+            [
+                "2ddf79a2e65cede4"
+            ]
+        ]
+    },
+    {
+        "id": "3cce4d468919f70f",
+        "type": "inject",
+        "z": "e6e934aab5a610e2",
+        "name": "record & module",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "record",
+                "v": "{\"id\":\"12x1931\",\"mobile\":\"0499-737-220\"}",
+                "vt": "json"
+            },
+            {
+                "p": "module",
+                "v": "Contacts",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 320,
+        "wires": [
+            [
+                "a95f97a14a988e84"
+            ]
+        ]
+    },
+    {
+        "id": "2ddf79a2e65cede4",
+        "type": "corebos-update",
+        "z": "e6e934aab5a610e2",
+        "name": "",
+        "connection": "",
+        "x": 750,
+        "y": 320,
+        "wires": [
+            [
+                "226fe83a95c7eb57"
+            ]
+        ]
+    },
+    {
+        "id": "05fd3172087deb57",
+        "type": "debug",
+        "z": "e6e934aab5a610e2",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "1e62cfa5c7ca9d3a",
+        "type": "corebos-login",
+        "z": "e6e934aab5a610e2",
+        "name": "",
+        "server": "e7379b195bf6a0f8",
+        "x": 420,
+        "y": 440,
+        "wires": [
+            [
+                "e79ca4475f62f3e1"
+            ]
+        ]
+    },
+    {
+        "id": "50ffedb7130f568f",
+        "type": "inject",
+        "z": "e6e934aab5a610e2",
+        "name": "record & module",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "record",
+                "v": "{\"firstname\":\"node2\",\"lastname\":\"red2\",\"mobile\":\"3333\",\"assigned_user_id\":\"19x1\"}",
+                "vt": "json"
+            },
+            {
+                "p": "module",
+                "v": "Contacts",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 440,
+        "wires": [
+            [
+                "1e62cfa5c7ca9d3a"
+            ]
+        ]
+    },
+    {
+        "id": "e79ca4475f62f3e1",
+        "type": "corebos-create",
+        "z": "e6e934aab5a610e2",
+        "name": "",
+        "connection": "",
+        "x": 740,
+        "y": 440,
+        "wires": [
+            [
+                "05fd3172087deb57"
+            ]
+        ]
+    },
+    {
+        "id": "e7379b195bf6a0f8",
+        "type": "corebos-config",
+        "name": "cbcreds",
+        "server": "http://localhost/coreBOSNG",
+        "username": "admin",
+        "accesskey": "cdYTBpiMR9RfGgO",
+        "token": ""
+    }
+]
