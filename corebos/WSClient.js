@@ -65,6 +65,8 @@ function addcbWsOptions(operation, valueMap=null, resource='', valueMapParam = '
 	let reqData = `operation=${operation}`;
 	if (valueMap && (typeof valueMap === 'object' || Array.isArray(valueMap))) {
 		reqData += `&${valueMapParam}=${JSON.stringify(valueMap)}`;
+	} else if (valueMap) {
+		reqData += `&${valueMapParam}=${valueMap}`;
 	}
 	if (resource) {
 		reqData += `&elementType=${resource}`;
