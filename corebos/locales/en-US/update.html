@@ -1,0 +1,19 @@
+<script type="text/html" data-help-name="corebos-update">
+	<p>Update a record with the values present in <code>msg.record</code> and the module <code>msg.module</code>. Must contain the record ID.</p>
+	<h3>Inputs</h3>
+	<dl class="message-properties">
+		<dt class="optional">Connection<span class="property-type">string</span></dt>
+		<dd>Login node name if not the default one.</dd>
+		<dt>msg.module<span class="property-type">string</span></dt>
+		<dd>Name of the module where we want to update the record.</dd>
+		<dt>msg.record<span class="property-type">object</span></dt>
+		<dd>Set of fields to update. Must contain the record ID.</dd>
+	</dl>
+	<h3>Outputs</h3>
+	<dl class="message-properties">
+		<dt>payload.updated<span class="property-type">boolean</span></dt>
+		<dd>True if the record was updated, false otherwise.</dd>
+		<dt>msg.record<span class="property-type">object</span></dt>
+		<dd>Full set of fields of the updated record.</dd>
+	</dl>
+</script>

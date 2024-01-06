@@ -1,0 +1,19 @@
+<script type="text/html" data-help-name="corebos-create">
+	<p>Insertar un registro con los valores presentes en <code>msg.record</code> y el módulo <code>msg.module</code></p>
+	<h3>Entradas</h3>
+	<dl class="message-properties">
+		<dt class="optional">Conexión<span class="property-type">texto</span></dt>
+		<dd>Nombre del nodo de inicio de sesión si no es el predeterminado.</dd>
+		<dt>msg.module<span class="property-type">texto</span></dt>
+		<dd>Nombre del módulo donde queremos crear el nuevo registro.</dd>
+		<dt>msg.record<span class="property-type">objeto</span></dt>
+		<dd>Conjunto de campos del nuevo registro a crear.</dd>
+	</dl>
+	<h3>Salidas</h3>
+	<dl class="message-properties">
+		<dt>payload.created<span class="property-type">booleano</span></dt>
+		<dd>Verdadero si se creó el registro; falso en caso contrario.</dd>
+		<dt>msg.record<span class="property-type">objeto</span></dt>
+		<dd>Conjunto completo de campos del registro recién creado</dd>
+	</dl>
+</script>

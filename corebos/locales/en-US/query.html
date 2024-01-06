@@ -1,0 +1,19 @@
+<script type="text/html" data-help-name="corebos-query">
+	<p>Execute a web service query.</p>
+	<h3>Inputs</h3>
+	<dl class="message-properties">
+		<dt class="optional">Connection<span class="property-type">string</span></dt>
+		<dd>Login node name if not the default one.</dd>
+		<dt>msg.query<span class="property-type">string</span></dt>
+		<dd>coreBOS web service query to execute.</dd>
+	</dl>
+	<h3>Outputs</h3>
+	<dl class="message-properties">
+		<dt>payload.totalrows<span class="property-type">integer</span></dt>
+		<dd>Total number of records of the query.</dd>
+		<dt>msg.record<span class="property-type">object</span></dt>
+		<dd>Full set of fields returned by the query. In other words, the columns of the select query.</dd>
+	</dl>
+	<h3>Details</h3>
+	<p>This node will generate as many messages as rows returned by the query. There will be one message for each row returned which will contain the values of that row in the <code>msg.record</code> property.</p>
+</script>

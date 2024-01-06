@@ -1,0 +1,15 @@
+<script type="text/html" data-help-name="corebos-delete">
+	<p>Delete a record identified by <code>msg.recordid</code></p>
+	<h3>Inputs</h3>
+	<dl class="message-properties">
+		<dt class="optional">Connection<span class="property-type">string</span></dt>
+		<dd>Login node name if not the default one.</dd>
+		<dt>msg.recordid<span class="property-type">string</span></dt>
+		<dd>ID of the record to be deleted.</dd>
+	</dl>
+	<h3>Outputs</h3>
+	<dl class="message-properties">
+		<dt>payload.deleted<span class="property-type">boolean</span></dt>
+		<dd>True if the record was deleted, false otherwise.</dd>
+	</dl>
+</script>

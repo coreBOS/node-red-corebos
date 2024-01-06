@@ -48,4 +48,6 @@ Each node will output a set of properties:
 ## What's next?
 
 - Token based access
+- Better i18n. Need to learn more.
+- List Types and Describe should optionally get their parameters from the message.
 - What do you need?

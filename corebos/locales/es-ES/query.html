@@ -1,0 +1,19 @@
+<script type="text/html" data-help-name="corebos-query">
+	<p>Ejecutar una consulta de servicio web.</p>
+	<h3>Entradas</h3>
+	<dl class="message-properties">
+		<dt class="optional">Conexión<span class="property-type">texto</span></dt>
+		<dd>Nombre del nodo de inicio de sesión si no es el predeterminado.</dd>
+		<dt>msg.query<span class="property-type">texto</span></dt>
+		<dd>Consulta del servicio web coreBOS para ejecutar.</dd>
+	</dl>
+	<h3>Salidas</h3>
+	<dl class="message-properties">
+		<dt>payload.totalrows<span class="property-type">entero</span></dt>
+		<dd>Número total de registros de la consulta.</dd>
+		<dt>msg.record<span class="property-type">objeto</span></dt>
+		<dd>Conjunto completo de campos devueltos por la consulta. En otras palabras, las columnas de la consulta de selección.</dd>
+	</dl>
+	<h3>Detalles</h3>
+	<p>Este nodo generará tantos mensajes como filas devuelva la consulta. Habrá un mensaje por cada fila devuelta que contendrá los valores de esa fila en la propiedad <code>msg.record</code>.</p>
+</script>

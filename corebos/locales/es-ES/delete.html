@@ -1,0 +1,15 @@
+<script type="text/html" data-help-name="corebos-delete">
+	<p>Eliminar un registro identificado por <code>msg.recordid</code></p>
+	<h3>Entradas</h3>
+	<dl class="message-properties">
+		<dt class="optional">Conexión<span class="property-type">texto</span></dt>
+		<dd>Nombre del nodo de inicio de sesión si no es el predeterminado.</dd>
+		<dt>msg.recordid<span class="property-type">texto</span></dt>
+		<dd>ID del registro a eliminar.</dd>
+	</dl>
+	<h3>Salidas</h3>
+	<dl class="message-properties">
+		<dt>payload.deleted<span class="property-type">booleano</span></dt>
+		<dd>Verdadero si se eliminó el registro; falso en caso contrario.</dd>
+	</dl>
+</script>

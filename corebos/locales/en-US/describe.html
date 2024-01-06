@@ -1,0 +1,19 @@
+<script type="text/html" data-help-name="corebos-describe">
+	<p>Get all the details of fields and metadata of a module.</p>
+	<h3>Inputs</h3>
+	<dl class="message-properties">
+		<dt class="optional">Connection<span class="property-type">string</span></dt>
+		<dd>Login node name if not the default one.</dd>
+		<dt>Modules<span class="property-type">string</span></dt>
+		<dd>Comma-separated list of modules to retrieve metadata.</dd>
+	</dl>
+	<h3>Outputs</h3>
+	<dl class="message-properties">
+		<dt>msg.module<span class="property-type">string</span></dt>
+		<dd>Module name of the metadata.</dd>
+		<dt>msg.metadata<span class="property-type">object</span></dt>
+		<dd>All the metadata of the module.</dd>
+	</dl>
+	<h3>Details</h3>
+	<p>This node will generate one message for each module name given, with two properties <code>module</code> and <code>metadata</code>. After that, it will forward the message it received unmodified.</p>
+</script>

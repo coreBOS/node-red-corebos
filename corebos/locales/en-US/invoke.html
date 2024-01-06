@@ -1,0 +1,21 @@
+<script type="text/html" data-help-name="corebos-invoke">
+	<p>Invoke any web service end point by setting <code>msg.method</code> and <code>msg.params</code>. Optionally, <code>msg.invoketype</code> to set GET or POST call.</p>
+	<h3>Inputs</h3>
+	<dl class="message-properties">
+		<dt class="optional">Connection<span class="property-type">string</span></dt>
+		<dd>Login node name if not the default one.</dd>
+		<dt>msg.method<span class="property-type">string</span></dt>
+		<dd>Web service method to execute.</dd>
+		<dt class="optional">msg.params<span class="property-type">object</span></dt>
+		<dd>Any set of parameters the method may require.</dd>
+		<dt class="optional">msg.invoketype<span class="property-type">string</span></dt>
+		<dd>GET or POST. POST will be used if not set.</dd>
+	</dl>
+	<h3>Outputs</h3>
+	<dl class="message-properties">
+		<dt>payload.invoked<span class="property-type">boolean</span></dt>
+		<dd>True if the call was successful, false otherwise.</dd>
+		<dt>msg.response<span class="property-type">object</span></dt>
+		<dd>Response of the execution of the method.</dd>
+	</dl>
+</script>

@@ -3,7 +3,7 @@
         "label": {
             "connection": "Conexión",
             "name": "Nombre Nodo",
-            "modules": "Module(s)"
+            "modules": "Módulo(s)"
         },
         "help": {
             "describe": "Obtener todos los detalles de campos y metadatos de un módulo"

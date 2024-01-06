@@ -1,0 +1,19 @@
+<script type="text/html" data-help-name="corebos-update">
+	<p>Actualiza un registro con los valores presentes en <code>msg.record</code> y el módulo <code>msg.module</code>. Debe contener el ID del registro.</p>
+	<h3>Entradas</h3>
+	<dl class="message-properties">
+		<dt class="optional">Conexión<span class="property-type">texto</span></dt>
+		<dd>Nombre del nodo de inicio de sesión si no es el predeterminado.</dd>
+		<dt>msg.module<span class="property-type">texto</span></dt>
+		<dd>Nombre del módulo donde queremos actualizar el registro.</dd>
+		<dt>msg.record<span class="property-type">objeto</span></dt>
+		<dd>Conjunto de campos a actualizar. Debe contener el ID del registro.</dd>
+	</dl>
+	<h3>Salidas</h3>
+	<dl class="message-properties">
+		<dt>payload.updated<span class="property-type">booleano</span></dt>
+		<dd>Verdadero si se actualizó el registro; falso en caso contrario.</dd>
+		<dt>msg.record<span class="property-type">objeto</span></dt>
+		<dd>Conjunto completo de campos del registro recién actualizado</dd>
+	</dl>
+</script>

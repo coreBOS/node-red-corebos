@@ -1,0 +1,19 @@
+<script type="text/html" data-help-name="corebos-describe">
+	<p>Obtener todos los detalles de campos y metadatos de un módulo.</p>
+	<h3>Entradas</h3>
+	<dl class="message-properties">
+		<dt class="optional">Conexión<span class="property-type">texto</span></dt>
+		<dd>Nombre del nodo de inicio de sesión si no es el predeterminado.</dd>
+		<dt>Módulos<span class="property-type">texto</span></dt>
+		<dd>Lista de módulos separados por comas para recuperar metadatos.</dd>
+	</dl>
+	<h3>Salidas</h3>
+	<dl class="message-properties">
+		<dt>msg.module<span class="property-type">texto</span></dt>
+		<dd>Nombre del módulo de los metadatos.</dd>
+		<dt>msg.metadata<span class="property-type">objeto</span></dt>
+		<dd>Todos los metadatos del módulo.</dd>
+	</dl>
+	<h3>Detalles</h3>
+	<p>Este nodo generará un mensaje para cada nombre de módulo dado, con dos propiedades <code>module</code> y <code>metadata</code>. Después de eso, reenviará el mensaje que recibió sin modificar.</p>
+</script>

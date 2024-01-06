@@ -1,0 +1,21 @@
+<script type="text/html" data-help-name="corebos-invoke">
+	<p>Llama a cualquier punto final de servicio web configurando <code>msg.method</code> y <code>msg.params</code>. Opcionalmente, <code>msg.invoketype</code> para configurar la llamada GET o POST.</p>
+	<h3>Entradas</h3>
+	<dl class="message-properties">
+		<dt class="optional">Conexión<span class="property-type">texto</span></dt>
+		<dd>Nombre del nodo de inicio de sesión si no es el predeterminado.</dd>
+		<dt>msg.method<span class="property-type">texto</span></dt>
+		<dd>Método de servicio web a ejecutar.</dd>
+		<dt class="optional">msg.params<span class="property-type">objeto</span></dt>
+		<dd>Cualquier conjunto de parámetros que el método pueda requerir.</dd>
+		<dt class="optional">msg.invoketype<span class="property-type">texto</span></dt>
+		<dd>GET o POST. Se usará POST si no se define.</dd>
+	</dl>
+	<h3>Salidas</h3>
+	<dl class="message-properties">
+		<dt>payload.invoked<span class="property-type">booleano</span></dt>
+		<dd>Verdadero si la llamada se realizó correctamente; falso en caso contrario.</dd>
+		<dt>msg.response<span class="property-type">objeto</span></dt>
+		<dd>Respuesta de la ejecución del método.</dd>
+	</dl>
+</script>
