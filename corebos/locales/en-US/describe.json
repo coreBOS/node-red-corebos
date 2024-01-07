@@ -1,8 +1,6 @@
 {
     "coreBOS" : {
         "label": {
-            "connection": "Connection",
-            "name": "Node Name",
             "modules": "Module(s)"
         },
         "help": {

@@ -1,8 +1,6 @@
 {
     "coreBOS" : {
         "label": {
-            "connection": "Conexión",
-            "name": "Nombre Nodo",
             "query": "Consulta"
         },
         "help": {

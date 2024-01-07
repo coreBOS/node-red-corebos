@@ -1,9 +1,5 @@
 {
     "coreBOS" : {
-        "label": {
-            "connection": "Connection",
-            "name": "Node Name"
-        },
         "help": {
             "invoke": "Invoke any web service end point by setting <code>msg.method</code> and <code>msg.params</code>. Optionally, <code>msg.invoketype</code> to set GET or POST call."
         }

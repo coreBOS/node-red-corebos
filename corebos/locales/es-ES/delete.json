@@ -1,9 +1,5 @@
 {
     "coreBOS" : {
-        "label": {
-            "connection": "Conexión",
-            "name": "Nombre Nodo"
-        },
         "help": {
             "delete": "Eliminar un registro identificado por <code>msg.recordid</code>"
         }

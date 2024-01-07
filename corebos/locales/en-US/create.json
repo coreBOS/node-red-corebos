@@ -1,9 +1,5 @@
 {
     "coreBOS" : {
-        "label": {
-            "connection": "Connection",
-            "name": "Node Name"
-        },
         "help": {
             "create": "Insert a record with the values present in <code>msg.record</code> and the module <code>msg.module</code>"
         }

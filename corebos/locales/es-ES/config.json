@@ -2,6 +2,7 @@
     "coreBOS" : {
         "label": {
             "server": "Servidor",
+            "connection": "Conexión",
             "name": "Nombre Nodo",
             "username": "Nombre Usuario",
             "accesskey": "Clave de Acceso",

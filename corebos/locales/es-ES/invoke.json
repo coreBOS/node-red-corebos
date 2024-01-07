@@ -1,9 +1,5 @@
 {
     "coreBOS" : {
-        "label": {
-            "connection": "Conexión",
-            "name": "Nombre Nodo"
-        },
         "help": {
             "invoke": "Llama a cualquier punto final de servicio web configurando <code>msg.method</code> y <code>msg.params</code>. Opcionalmente, <code>msg.invoketype</code> para configurar la llamada GET o POST."
         }

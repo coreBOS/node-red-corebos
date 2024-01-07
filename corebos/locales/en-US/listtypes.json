@@ -1,9 +1,5 @@
 {
     "coreBOS" : {
-        "label": {
-            "connection": "Connection",
-            "name": "Node Name"
-        },
         "help": {
             "listtypes": "Get a list of available modules"
         }

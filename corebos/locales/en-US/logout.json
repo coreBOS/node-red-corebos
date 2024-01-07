@@ -2,10 +2,6 @@
     "coreBOS" : {
         "loginfailed": "Login failed",
         "loginsuccess": "Login success",
-        "label": {
-            "connection": "Connection",
-            "name": "Node Name"
-        },
         "help": {
             "logout": "Execute the logout process from coreBOS"
         }
