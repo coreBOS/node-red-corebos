@@ -1,10 +1,13 @@
 {
   "name": "@corebos/node-red-corebos",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This node can be used in order to interact with the coreBOS web service API.",
   "main": "none",
   "publishConfig": {
     "access": "public"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
