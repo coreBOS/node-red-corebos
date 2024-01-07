@@ -1,0 +1,88 @@
+[
+    {
+        "id": "4079911adc1f640f",
+        "type": "tab",
+        "label": "Logout",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a88900b86a479e6a",
+        "type": "debug",
+        "z": "4079911adc1f640f",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "3eba2784942bde56",
+        "type": "corebos-login",
+        "z": "4079911adc1f640f",
+        "name": "cbng",
+        "server": "e7379b195bf6a0f8",
+        "x": 230,
+        "y": 100,
+        "wires": [
+            [
+                "f67d3d916d6bb7db"
+            ]
+        ]
+    },
+    {
+        "id": "a4a312ba2b7d1308",
+        "type": "corebos-logout",
+        "z": "4079911adc1f640f",
+        "name": "",
+        "connection": "cbng",
+        "x": 760,
+        "y": 260,
+        "wires": [
+            [
+                "a88900b86a479e6a"
+            ]
+        ]
+    },
+    {
+        "id": "f67d3d916d6bb7db",
+        "type": "corebos-login",
+        "z": "4079911adc1f640f",
+        "name": "EV inst",
+        "server": "075a128110af5832",
+        "x": 480,
+        "y": 100,
+        "wires": [
+            [
+                "a4a312ba2b7d1308",
+                "a88900b86a479e6a"
+            ]
+        ]
+    },
+    {
+        "id": "e7379b195bf6a0f8",
+        "type": "corebos-config",
+        "name": "cbcreds",
+        "server": "http://localhost/coreBOSNG",
+        "username": "admin",
+        "accesskey": "cdYTBpiMR9RfGgO",
+        "token": ""
+    },
+    {
+        "id": "075a128110af5832",
+        "type": "corebos-config",
+        "name": "EV Inst",
+        "server": "http://localhost/evinst",
+        "username": "admin",
+        "accesskey": "FeBH8udmG9PFZu6V",
+        "token": ""
+    }
+]

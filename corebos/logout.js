@@ -13,6 +13,9 @@ module.exports = function(RED) {
                 try {
                     await cblib.doLogout();
                     cblib.setConnection({'host': '', 'sessionName': '', userId: false});
+                    if (conn != 'corebos' && msg.payload[conn] == msg.payload.corebos) {
+                        delete msg.payload.corebos;
+                    }
                     delete msg.payload[conn];
                     if (send) {
                         send(msg);
